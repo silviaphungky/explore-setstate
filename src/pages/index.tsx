@@ -24,8 +24,17 @@ export default function Home() {
       </Head>
       <main className={`${styles.main} ${inter.className}`}>
         {data.map((item) => (
-          <div style={{ color: 'red' }} key={item}>
-            {item}
+          <div key={item}>
+            <div style={{ color: 'red' }}>{item}</div>
+            <button
+              style={{
+                outline: 'none',
+                borderRadius: '0.5rem',
+                padding: '0.75rem 0.25rem',
+              }}
+            >
+              {item}
+            </button>
           </div>
         ))}
       </main>
