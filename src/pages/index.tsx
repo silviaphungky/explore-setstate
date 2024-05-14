@@ -36,7 +36,6 @@ export default function Home() {
               {item}
             </button>
             <div style={{ color: 'red' }}>{item}</div>
-            <div style={{ color: 'red' }}>{item}</div>
           </div>
         ))}
       </main>
