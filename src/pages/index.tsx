@@ -10,7 +10,7 @@ export default function Home() {
   const [data, setData] = useState<Array<number>>([])
 
   useEffect(() => {
-    Array.from(Array(500000).keys()).forEach((el) => {
+    Array.from(Array(1000000).keys()).forEach((el) => {
       setData((prev) => [el, ...prev].slice(0, 19))
     })
   }, [])
@@ -26,15 +26,6 @@ export default function Home() {
         {data.map((item) => (
           <div key={item} style={{ display: 'flex', gap: '0.5rem' }}>
             <div style={{ color: 'red' }}>{item}</div>
-            <button
-              style={{
-                outline: 'none',
-                borderRadius: '0.5rem',
-                padding: '0.75rem 0.25rem',
-              }}
-            >
-              {item}
-            </button>
             <div style={{ color: 'red' }}>{item}</div>
           </div>
         ))}
