@@ -14,7 +14,7 @@ export default function Home() {
       setData((prev) => {
         return [(prev[0] || 0) + 1, ...prev].slice(0, 19)
       })
-    }, 100)
+    }, 5)
 
     return () => clearInterval(interval)
   }, [])
