@@ -10,7 +10,7 @@ export default function Home() {
   const [data, setData] = useState<Array<number>>([])
 
   useEffect(() => {
-    Array.from(Array(1000000).keys()).forEach((el) => {
+    Array.from(Array(1000).keys()).forEach((el) => {
       setData((prev) => [el, ...prev].slice(0, 19))
     })
   }, [])
