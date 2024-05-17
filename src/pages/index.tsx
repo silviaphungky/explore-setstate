@@ -10,11 +10,13 @@ export default function Home() {
   const [data, setData] = useState<Array<number>>([])
 
   useEffect(() => {
-    setInterval(() => {
+    const interval = setInterval(() => {
       setData((prev) => {
         return [(prev[0] || 0) + 1, ...prev].slice(0, 19)
       })
-    }, 300000)
+    }, 100)
+
+    return () => clearInterval(interval)
   }, [])
   return (
     <>
